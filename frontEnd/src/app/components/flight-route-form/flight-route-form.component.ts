@@ -32,10 +32,16 @@ export class FlightRouteFormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (!this.flightRouteForm) return;
-    
+    if (!this.flightRouteForm.valid) return;
+
     const origin = this.flightRouteForm.value.origin.toUpperCase();
     const destination = this.flightRouteForm.value.destination.toUpperCase();
+
+    if (origin === destination) {
+      alert('El origen y el destino no pueden ser iguales. Por favor, ingresa destinos diferentes.');
+      return;
+    }
+
     this.journeyService.getFlightRoute(origin, destination).subscribe(
       (journey: JourneyModel) => {
         this.journey = journey;
@@ -58,5 +64,5 @@ export class FlightRouteFormComponent implements OnInit {
     for (const flight of this.journey.flights) {
       flight.price *= conversionRate;
     }
-  } 
+  }
 }
