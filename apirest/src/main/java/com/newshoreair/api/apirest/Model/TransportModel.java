@@ -7,11 +7,11 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="transports")
 public class TransportModel {
-	
+
 	@Id
     private String flightNumber;
     private String flightCarrier;
-    
+
 	public TransportModel() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -38,5 +38,5 @@ public class TransportModel {
 		return "TransportModel [flightCarrier=" + flightCarrier + ", flightNumber=" + flightNumber + "]";
 	}
 
-    
+
 }
