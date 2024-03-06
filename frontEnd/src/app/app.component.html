@@ -1,0 +1,9 @@
+<app-navbar (selectComponent)="onSelectComponent($event)"></app-navbar>
+<div class="container mt-4">
+  <div *ngIf="selectedComponent === 'presentation'">
+    <app-presentation></app-presentation>
+  </div>
+  <div *ngIf="selectedComponent === 'flight-route'">
+    <app-flight-route-form></app-flight-route-form>
+  </div>
+</div>

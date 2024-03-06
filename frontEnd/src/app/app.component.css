@@ -1,0 +1,36 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Color de fondo claro */
+    color: #333; /* Color de texto oscuro */
+    transition: background-color 0.3s ease; /* Transición suave para cambios de color de fondo */
+  }
+  
+  /* Estilos para el modo oscuro */
+  body.dark-mode {
+    background-color: #222; /* Color de fondo oscuro */
+    color: #ddd; /* Color de texto claro */
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos para el contenido */
+  .container > * {
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos adicionales para mejorar la apariencia */
+  h1, h2 {
+    color: #007bff; /* Color azul para títulos */
+  }
+  
+  p {
+    line-height: 1.5; /* Espaciado de línea */
+  }
+  

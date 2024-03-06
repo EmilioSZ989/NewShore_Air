@@ -1,0 +1,32 @@
+.navbar {
+  background-color: #333; /* Color de fondo del Navbar */
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  border: none;
+  color: #fff; /* Color del botón */
+}
+
+.navbar-toggler:focus {
+  outline: none; /* Quita el borde al hacer foco en el botón */
+}
+
+.navbar-nav {
+  margin-left: auto; /* Coloca los enlaces al lado derecho */
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff; /* Color de los enlaces */
+  transition: color 0.3s; /* Animación suave al cambiar el color */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #55aaff; /* Cambio de color al pasar el ratón */
+}

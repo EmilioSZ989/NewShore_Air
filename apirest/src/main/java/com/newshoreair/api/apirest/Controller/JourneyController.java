@@ -16,6 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/journeys")
+@CrossOrigin(origins = "http://localhost:4200/")
 public class JourneyController {
 
 	@Autowired

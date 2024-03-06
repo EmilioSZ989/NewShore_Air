@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/transports")
+@CrossOrigin(origins = "http://localhost:4200/")
 public class TransportController {
 
     @Autowired

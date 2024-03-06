@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="form-section">
+      <form *ngIf="flightRouteForm" [formGroup]="flightRouteForm" (ngSubmit)="onSubmit()" class="form-container">
+        <div class="form-group">
+          <label for="origin">Origen:</label>
+          <input type="text" id="origin" formControlName="origin" class="form-control" placeholder="Ingrese origen (3 letras)">
+          <div *ngIf="flightRouteForm?.get('origin')?.invalid && (flightRouteForm?.get('origin')?.dirty || flightRouteForm?.get('origin')?.touched)" class="text-danger">
+            <div *ngIf="flightRouteForm?.get('origin')?.errors?.['required']">El origen es requerido.</div>
+            <div *ngIf="flightRouteForm?.get('origin')?.errors?.['minlength']">El origen debe tener al menos 3 caracteres.</div>
+            <div *ngIf="flightRouteForm?.get('origin')?.errors?.['maxlength']">El origen no debe tener más de 3 caracteres.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="destination">Destino:</label>
+          <input type="text" id="destination" formControlName="destination" class="form-control" placeholder="Ingrese destino (3 letras)">
+          <div *ngIf="flightRouteForm?.get('destination')?.invalid && (flightRouteForm?.get('destination')?.dirty || flightRouteForm?.get('destination')?.touched)" class="text-danger">
+            <div *ngIf="flightRouteForm?.get('destination')?.errors?.['required']">El destino es requerido.</div>
+            <div *ngIf="flightRouteForm?.get('destination')?.errors?.['minlength']">El destino debe tener al menos 3 caracteres.</div>
+            <div *ngIf="flightRouteForm?.get('destination')?.errors?.['maxlength']">El destino no debe tener más de 3 caracteres.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="currency">Moneda:</label>
+          <select id="currency" formControlName="currency" class="form-control">
+            <option value="USD">USD</option>
+            <option value="COP">COP</option>
+            <option value="MXN">MXN</option>
+          </select>
+        </div>
+        <button type="submit" [disabled]="flightRouteForm?.invalid" class="btn btn-primary">Buscar Ruta de Vuelo</button>
+      </form>
+    </div>
+    
+    <div *ngIf="journey" class="flight-route">
+      <h2>Viaje</h2>
+      <div class="journey-details">
+        <p><strong>Desde:</strong> {{journey.origin}} <strong>Hasta:</strong> {{journey.destination}} <strong>Costaría:</strong> {{journey.price}}</p>
+      </div>
+  
+      <h2>Rutas de vuelo</h2>
+      <div class="flight-list">
+        <div class="flight" *ngFor="let flight of journey.flights">
+          <div class="flight-details">
+            <p><strong>Origen:</strong> {{ flight.origin }} <strong>Destino:</strong> {{ flight.destination }} <strong>Precio:</strong> {{ flight.price }} <strong>Número de vuelo:</strong> {{ flight.transport.flightNumber }} <strong>Transportista:</strong> {{ flight.transport.flightCarrier }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

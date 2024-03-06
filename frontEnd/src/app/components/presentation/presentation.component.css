@@ -1,0 +1,53 @@
+.presentation-container {
+  padding: 50px;
+  background-color: #333; /* Fondo oscuro */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra en color blanco */
+  text-align: center;
+}
+
+.presentation-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ddd; /* Color del título en modo oscuro */
+}
+
+.presentation-text {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ccc; /* Color del texto en modo oscuro */
+}
+
+.highlights {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.highlight-item {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #444; /* Fondo oscuro */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra en color blanco */
+  transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+.highlight-item:hover {
+  transform: translateY(-5px); /* Desplazamiento hacia arriba al hacer hover */
+}
+
+.highlight-item i {
+  color: #007bff; /* Color de los íconos en modo oscuro */
+}
+
+.highlight-item h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #ddd; /* Color del título en modo oscuro */
+}
+
+.highlight-item p {
+  font-size: 16px;
+  color: #ccc; /* Color del texto en modo oscuro */
+}

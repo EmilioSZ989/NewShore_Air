@@ -1,0 +1,105 @@
+body {
+  background-color: #222; /* Color de fondo oscuro */
+  color: #ddd; /* Color del texto */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-container {
+  padding: 20px;
+  background-color: #333; /* Fondo oscuro del formulario */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra del formulario */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #ddd; /* Color de texto para las etiquetas */
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #666; /* Borde del campo de entrada */
+  border-radius: 5px;
+  background-color: #444; /* Fondo oscuro del campo de entrada */
+  color: #ddd; /* Color del texto en el campo de entrada */
+}
+
+/* Placeholder blanco */
+.form-control::placeholder {
+  color: #ddd;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.flight-route {
+  margin-top: 50px;
+  border: 1px solid #555; /* Borde oscuro */
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #444; /* Fondo oscuro */
+}
+
+.flight-route h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #ddd;
+}
+
+.journey-details p {
+  margin: 0;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.flight-list {
+  margin-top: 20px;
+}
+
+.flight-details {
+  padding: 15px;
+  border: 1px solid #666; /* Borde oscuro */
+  border-radius: 5px;
+  background-color: #333; /* Fondo oscuro */
+  transition: all 0.3s ease;
+}
+
+.flight-details:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1); /* Sombra al pasar el ratón */
+}
+
+.flight-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #ddd; /* Color del texto */
+}
+
+.flight-details strong {
+  margin-right: 5px;
+  font-weight: bold;
+  color: #ccc; /* Color del texto */
+}
