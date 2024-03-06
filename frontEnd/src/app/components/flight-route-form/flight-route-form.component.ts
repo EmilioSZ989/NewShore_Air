@@ -43,6 +43,7 @@ export class FlightRouteFormComponent implements OnInit {
       },
       error => {
         console.error('Error al obtener la ruta de vuelo:', error);
+        alert('No se pudo encontrar una ruta de vuelo. Por favor, intenta con otros destinos.');
       }
     );
   }
